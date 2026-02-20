@@ -1,0 +1,26 @@
+import type { Metadata } from 'next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
+export const metadata: Metadata = {
+  title: 'Cosmetalogiya - Косметология услуги',
+  description: 'Профессиональные косметологические услуги. Запись через Telegram бот.',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="ru">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
+    </html>
+  )
+}
